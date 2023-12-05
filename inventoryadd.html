@@ -1,0 +1,30 @@
+<html> 
+  <head>
+    <!--The website title-->
+    <title>Lance Heydinger E-Commerce Project Website</title> 
+  </head>
+
+  <body> 
+    <!--Website header-->
+    <h1>Lance Heydinger E-Commerce Project Website</h1>
+    <ul>
+      <!--Links to other parts of the website-->
+        <li><a href="/">Home</a></li>
+        <li><a href="/inventoryview">View Inventory</a></li>
+    </ul>
+    <!--The form to add to the inventory-->
+    <form action="/inventoryadd" method="post">
+      <!--The input fields for the form-->  
+    <label for="category">Category:   </label>
+    <input type="text" id="category" name="category" required><br>
+    <label for="description">Description:</label>
+    <input type="text" id="description" name="description" required><br>
+    <label for="price">Price:     $</label>
+    <input type="text" id="price" name="price" required><br>
+    <label for="code">Product Code:</label>
+    <input type="text" id="code" name="code" required><br>
+    <!--Submits the data in the boxes-->
+    <button type="submit">Submit</button>
+    </form>
+  </body>
+</html>

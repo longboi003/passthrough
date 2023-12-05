@@ -1,0 +1,41 @@
+<html> 
+  <head>
+    <!--The website title-->
+    <title>Lance Heydinger E-Commerce Project Website</title> 
+  </head>
+  <!-- The body section -->
+  <body> 
+    <h1>Lance Heydinger E-Commerce Project Website</h1>
+    <ul>
+      <!--Links to other parts of the website-->
+        <li><a href="/">Home</a></li>
+        <li><a href="/inventoryadd">Add to Inventory</a></li>
+    </ul>
+    <!--The search bar uses a input and a GET and sends it over to the python app to search the sql table-->
+    <form method="GET" action="/inventoryview">
+        <input type="text" name="search">
+        <input type="submit" value="Search">
+    </form>
+    <!--The table that displays the inventory-->
+    <table border="1">
+        <tr>
+          <!--The table column names-->
+            <th>Category</th>
+            <th>Description</th>
+            <th>Price</th>
+            <th>Code</th>
+        </tr>
+        <!--Jinja for loop to loop through the items in the inventory-->
+        {% for item in items %}
+        <tr>
+          <!--Jinja expression to put the item details in the table-->
+            <td>{{ item[0] }}</td>
+            <td>{{ item[1] }}</td>
+            <td>{{ item[2] }}</td>
+            <td>{{ item[3] }}</td>
+        </tr>
+        <!--End of the for loop-->
+        {% endfor %}
+    </table>
+  </body>
+</html>
